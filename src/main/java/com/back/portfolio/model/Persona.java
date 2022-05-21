@@ -29,13 +29,13 @@ public class Persona {
     @OneToMany(mappedBy="persona",cascade= {CascadeType.ALL})
     private List<Estudio> estudios;
     
-    @OneToMany(mappedBy="idPersona",cascade=CascadeType.ALL)
+    @OneToMany(mappedBy="persona",cascade=CascadeType.ALL)
     private List<Experiencia> experiencias;
     
-    @OneToMany(mappedBy="idPersona",cascade={CascadeType.ALL})
+    @OneToMany(mappedBy="persona",cascade={CascadeType.ALL})
     private List<Proyecto> proyectos;
     
-    @OneToMany(mappedBy="idPersona", cascade={CascadeType.ALL})
+    @OneToMany(mappedBy="persona", cascade={CascadeType.ALL})
     private List<Tecnologia> tecnologias;
     
     public Persona(){
