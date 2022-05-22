@@ -3,6 +3,7 @@ package com.back.portfolio.controller;
 
 import com.back.portfolio.model.Experiencia;
 import com.back.portfolio.service.IExperienciaService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,5 +46,11 @@ public class ExperienciaController {
     @ResponseBody
     public Experiencia detail(@PathVariable("id") int id){
         return expServ.buscarExperiencia(id);
+    }
+    
+    @GetMapping("/showAll")
+    @ResponseBody
+    public List<Experiencia> showExperiences(){
+        return expServ.verExperiencias();
     }
 }

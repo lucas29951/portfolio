@@ -3,6 +3,7 @@ package com.back.portfolio.controller;
 
 import com.back.portfolio.model.Estudio;
 import com.back.portfolio.service.IEstudioService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,5 +44,11 @@ public class EstudioController {
     @ResponseBody
     public Estudio detail(@PathVariable("id") int id){
         return estuServ.buscarEstudio(id);
+    }
+    
+    @GetMapping("/showAll")
+    @ResponseBody
+    public List<Estudio> showStudies(){
+        return estuServ.verEstudios();
     }
 }

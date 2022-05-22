@@ -3,6 +3,7 @@ package com.back.portfolio.controller;
 
 import com.back.portfolio.model.Tecnologia;
 import com.back.portfolio.service.ITecnologiaService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,5 +41,11 @@ public class TecnologiaController {
     @ResponseBody
     public Tecnologia detail(@PathVariable("id") int id){
         return tecnoServ.buscarTecnologia(id);
+    }
+    
+    @GetMapping("/showAll")
+    @ResponseBody
+    public List<Tecnologia> showTechnologies(){
+        return tecnoServ.verTecnologias();
     }
 }

@@ -3,6 +3,7 @@ package com.back.portfolio.controller;
 
 import com.back.portfolio.model.Proyecto;
 import com.back.portfolio.service.IProyectoService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,5 +45,11 @@ public class ProyectoController {
     @ResponseBody
     public Proyecto detail(@PathVariable("id") int id){
         return proServ.buscarProyecto(id);
+    }
+    
+    @GetMapping("/showAll")
+    @ResponseBody
+    public List<Proyecto> showProjects(){
+        return proServ.verProyectos();
     }
 }

@@ -3,6 +3,7 @@ package com.back.portfolio.controller;
 
 import com.back.portfolio.model.Persona;
 import com.back.portfolio.service.IPersonaService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,5 +44,11 @@ public class PersonaController {
     @ResponseBody
     public Persona detail(@PathVariable("id") int id){
         return persoServ.buscarPersona(id);
+    }
+    
+    @GetMapping("/showAll")
+    @ResponseBody
+    public List<Persona> showPersons(){
+        return persoServ.verPersonas();
     }
 }

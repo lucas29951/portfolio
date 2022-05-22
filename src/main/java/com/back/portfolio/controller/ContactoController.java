@@ -3,6 +3,7 @@ package com.back.portfolio.controller;
 
 import com.back.portfolio.model.Contacto;
 import com.back.portfolio.service.IContactoService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,5 +42,11 @@ public class ContactoController {
     @ResponseBody
     public Contacto detail(@PathVariable("id") int id){
         return contServ.buscarContacto(id);
+    }
+    
+    @GetMapping("/showAll")
+    @ResponseBody
+    public List<Contacto> showContacts(){
+        return contServ.verContactos();
     }
 }

@@ -3,6 +3,7 @@ package com.back.portfolio.controller;
 
 import com.back.portfolio.model.Usuario;
 import com.back.portfolio.service.IUsuarioService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,5 +44,11 @@ public class UsuarioController {
     @ResponseBody
     public Usuario detail(@PathVariable("id") int id){
         return uServ.buscarUsuario(id);
+    }
+    
+    @GetMapping("/showAll")
+    @ResponseBody
+    public List<Usuario> showUsers(){
+        return uServ.verUsuarios();
     }
 }
