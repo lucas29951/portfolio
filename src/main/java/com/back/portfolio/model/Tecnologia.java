@@ -18,6 +18,7 @@ public class Tecnologia {
     private int idTec;
     @Basic
     private String nombre_tecno;
+    private int nivel;
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="idPersona")
     @JsonBackReference
@@ -27,9 +28,10 @@ public class Tecnologia {
         
     }
 
-    public Tecnologia(int idTec, String nombre_tecno, Persona persona) {
+    public Tecnologia(int idTec, String nombre_tecno, int nivel, Persona persona) {
         this.idTec = idTec;
         this.nombre_tecno = nombre_tecno;
+        this.nivel = nivel;
         this.persona = persona;
     }
     
