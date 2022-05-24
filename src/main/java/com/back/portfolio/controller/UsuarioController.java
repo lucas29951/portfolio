@@ -51,4 +51,11 @@ public class UsuarioController {
     public List<Usuario> showUsers(){
         return uServ.verUsuarios();
     }
+    
+    @PostMapping("/login")
+    @ResponseBody
+    public Usuario login(@RequestBody Usuario user){
+        return uServ.loginUsuario(user);
+    }
+    
 }

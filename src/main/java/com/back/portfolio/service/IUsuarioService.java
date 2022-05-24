@@ -12,4 +12,5 @@ public interface IUsuarioService {
     public void borrarUsuario(int id);
     public Usuario buscarUsuario(int id);
     public void editarUsuario(Usuario user);
+    public Usuario loginUsuario(Usuario user);
 }

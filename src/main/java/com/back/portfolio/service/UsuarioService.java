@@ -38,4 +38,8 @@ public class UsuarioService implements IUsuarioService{
         userRepo.save(user);
     }
     
+    @Override
+    public Usuario loginUsuario(Usuario user){
+        return userRepo.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+    }
 }
