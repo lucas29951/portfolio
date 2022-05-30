@@ -30,7 +30,7 @@ public class ProyectoController {
             nvo.setImagen_demo(pro.getImagen_demo());
             nvo.setEnlace_proyecto(pro.getEnlace_proyecto());
             nvo.setFecha_realizacion(pro.getFecha_realizacion());
-            nvo.setPersona(pro.getPersona());
+            //nvo.setPersona(pro.getPersona());
             
             proServ.editarProyecto(nvo);
         }

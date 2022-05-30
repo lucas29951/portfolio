@@ -30,7 +30,7 @@ public class EstudioController {
             nvo.setTitulo(est.getTitulo());
             nvo.setFecha_entrada(est.getFecha_entrada());
             nvo.setFecha_salida(est.getFecha_salida());
-            nvo.setPersona(est.getPersona());
+            //nvo.setPersona(est.getPersona());
             
             estuServ.editarEstudio(nvo);
         }

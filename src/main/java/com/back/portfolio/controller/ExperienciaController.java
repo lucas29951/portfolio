@@ -31,7 +31,7 @@ public class ExperienciaController {
             nva.setFecha_inicio(exp.getFecha_inicio());
             nva.setFecha_fin(exp.getFecha_fin());
             nva.setDescripcion(exp.getDescripcion());
-            nva.setPersona(exp.getPersona());
+            //nva.setPersona(exp.getPersona());
             
             expServ.editarExperiencia(nva);
         }

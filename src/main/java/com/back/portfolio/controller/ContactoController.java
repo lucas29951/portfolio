@@ -27,7 +27,7 @@ public class ContactoController {
         if(nvo != null){
             nvo.setNombre_info(con.getNombre_info());
             nvo.setInfo(con.getInfo());
-            nvo.setPersona(con.getPersona());
+            //nvo.setPersona(con.getPersona());
             
             contServ.editarContacto(nvo);
         }
